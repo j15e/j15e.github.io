@@ -1,4 +1,4 @@
-<html xml:lang="fr" lang="fr">
+<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -30,6 +30,12 @@ body, a {
   font-family: Arial;
 }
 
+nav {
+  font-size: 12px;
+  padding: 12px 0;
+  text-transform: uppercase;;
+}
+
 ul { list-style-type: none; }
 
 .enveloppe {
@@ -38,7 +44,28 @@ ul { list-style-type: none; }
   padding: 0 18px;
 }
 
-.lettre { padding: 60px 0; }
+.lettre {
+  padding: 60px 0;
+}
+
+/* CSS i18n for fun */
+#fr .traduit:lang(fr) {
+  height: auto;
+  opacity: 1;
+}
+#en .traduit:lang(en),
+#es .traduit:lang(es) {
+ display: none;
+ overflow: hidden;
+ opacity: 0;
+}
+
+#fr:target .traduit:lang(fr) { display: block; opacity: 1; }
+#en:target .traduit:lang(en) { display: block; opacity: 1; }
+#es:target .traduit:lang(es) { display: block; opacity: 1; }
+
+#en:target .traduit:lang(fr) { display:none; height: 0; opacity: 0; }
+#es:target .traduit:lang(fr) { display:none; height: 0; opacity: 0;}
 
 .pieces {
   letter-spacing: -0.31em;
@@ -100,16 +127,36 @@ ul { list-style-type: none; }
 }
 </style>
 
+<div class="lg-choix" id="fr"><div class="lg-choix" id="en"><div class="lg-choix" id="es">
 <div class="enveloppe">
-
-  <p class="lettre">
-    Bonjour et bienvenue sur mon site!<br/>
-    Je fais plein de choses et plusieurs de ces choses sont liées à internet.<br/>
-    J’aime les choses bien faites et les partager avec mes amis.<br/>
-    Voici donc quelques liens utiles.<br/>
-    Passez une bonne journée,<br/>
-    JP Doyle
-  </p>
+  <nav>
+    <a href="#fr">Fr</a>
+    <a href="#en">En</a>
+    <a href="#es">Es</a>
+  </nav>
+  <div class="lettre">
+    <p class="texte traduit" lang="fr">
+      Bonjour et bienvenue sur mon site!<br>
+      Je fais plein de choses et plusieurs de ces choses sont liées à internet.<br>
+      J’aime les choses bien faites et les partager avec mes amis.<br>
+      Voici donc quelques liens utiles.<br>
+      Passez une bonne journée,<br>
+      JP Doyle
+    </p>
+    <p class="texte traduit" lang="en">
+      Hello and welcome to my web page!<br>
+      I do various stuff and a lot of this stuff is internet related.<br>
+      I like well done stuff & sharing it with my friends.<br>
+      Here is a few usefull links.<br>
+      Have a nice day,<br>
+      JP Doyle
+    </p>
+    <p class="texte traduit" lang="es">
+      Yo no hablo español =/<br>
+      Pase siendo un buen día!<br>
+      JP Doyle
+    </p>
+  </div>
 
   <div class="pieces">
     <section class="gros-bloc">
@@ -117,7 +164,9 @@ ul { list-style-type: none; }
         <p><a href="http://www.flickr.com/photos/j15e/10829755225/">
           <img src="pro.jpg" alt="Jean-Philippe Doyle dans l'internet professionnel">
         </a></p>
-        <h2 class="pro">Internet professionnel</h2>
+        <h2 class="pro traduit" lang="fr">Internet professionnel</h2>
+        <h2 class="pro traduit" lang="en">Professional internet</h2>
+        <h2 class="pro traduit" lang="es">Internet profesional</h2>
         <ul>
           <li><a href="http://github.com/j15e">github.com/j15e</a>
           <li><a href="http://hooktstudios.com">hooktstudios.com</a>
@@ -131,7 +180,9 @@ ul { list-style-type: none; }
       <article>
         <p><a href="http://www.flickr.com/photos/j15e/10633207056/">
           <img src="perso.jpg" alt="Jean-Philippe Doyle dans l'internet personnel"></a></p>
-        <h2 class="perso">Internet personnel</h2>
+        <h2 class="perso traduit" lang="fr">Internet personnel</h2>
+        <h2 class="perso traduit" lang="en">Personnal internel</h2>
+        <h2 class="perso traduit" lang="es">Internet personal</h2>
         <ul>
           <li><a href="http://flickr.com/photos/j15e">flickr.com/photos/j15e</a>
           <li><a href="http://rdio.com/people/j15e">rdio.com/people/j15e</a>
@@ -142,6 +193,7 @@ ul { list-style-type: none; }
   </div>
 
 </div>
+</div></div></div>
 </body>
 </html>
 
