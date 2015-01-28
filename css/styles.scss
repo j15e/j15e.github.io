@@ -1,0 +1,101 @@
+---
+---
+
+/* Reset */
+html, body, div, h2, a, ol, ul, li, p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body { line-height: 1; }
+ol, ul { list-style: none; }
+
+/* Mon style */
+body, a {
+  color: #5d6574;
+  font-family: Arial;
+}
+
+ul { list-style-type: none; }
+
+.enveloppe {
+  margin: 0 auto;
+  max-width: 866px;
+  padding: 0 18px;
+}
+
+.pieces {
+  padding-top: 2em;
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
+}
+
+  .pieces p, .pieces ul { margin-bottom: 32px; }
+
+.gros-bloc {
+  letter-spacing: normal;
+  width: 49%;
+  margin-right: 2%;
+  display: inline-block;
+  overflow: hidden;
+  font-family: 'Average Sans';
+}
+.gros-bloc:last-child { margin-right: 0; }
+
+  .gros-bloc a { font-family: 'Average Sans'; }
+  .gros-bloc article { padding-right: 18px; }
+  .gros-bloc img { width: 100%; }
+  .gros-bloc h2 {
+    line-height: 48px;
+    font-size: 24px;
+    padding: 0 18px;
+    margin: 0 0 12px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+  }
+  .gros-bloc h2.pro { background-color: #595781; }
+  .gros-bloc h2.perso { background-color: #008190; }
+  .gros-bloc li {
+    padding-left: 18px;
+    font-size:  24px;
+    line-height: 28px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.lettre {
+  font-family: Courier;
+  font-size: 18px;
+  line-height:36px;
+}
+
+li.mini {
+  line-height:18px;
+  font-size:14px;
+}
+
+@media (max-width: 856px) {
+  .lettre .corps br { display: none; }
+}
+@media (max-width: 680px) {
+  .lettre {
+    font-size: 15px;
+    line-height: 28px;
+  }
+  .gros-bloc {
+    width: 100%;
+    margin: 0;
+  }
+}
