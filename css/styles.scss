@@ -52,13 +52,15 @@ ul { list-style-type: none; }
   display: inline-block;
   overflow: hidden;
   font-family: 'Average Sans';
-}
-.gros-bloc:last-child { margin-right: 0; }
 
-  .gros-bloc a { font-family: 'Average Sans'; }
-  .gros-bloc article { padding-right: 18px; }
-  .gros-bloc img { width: 100%; }
-  .gros-bloc h2 {
+  &:last-child {
+    margin-right: 0;
+  }
+
+  a { font-family: 'Average Sans'; }
+  article { padding-right: 18px; }
+  img { width: 100%; }
+  h2 {
     line-height: 48px;
     font-size: 24px;
     padding: 0 18px;
@@ -66,14 +68,15 @@ ul { list-style-type: none; }
     color: white;
     -webkit-font-smoothing: antialiased;
   }
-  .gros-bloc h2.pro { background-color: #595781; }
-  .gros-bloc h2.perso { background-color: #008190; }
-  .gros-bloc li {
+  h2.pro { background-color: #595781; }
+  h2.perso { background-color: #008190; }
+  li {
     padding-left: 18px;
     font-size:  24px;
     line-height: 28px;
     -webkit-font-smoothing: antialiased;
   }
+}
 
 .lettre {
   font-family: Courier;
@@ -84,6 +87,30 @@ ul { list-style-type: none; }
 li.mini {
   line-height:18px;
   font-size:14px;
+}
+
+.cv {
+  ul { margin-bottom: 1em; }
+  li {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  li li {
+    font-size: 13px;
+  }
+  .detail {
+    color: #849BB5;
+    font-size: 13px;
+  }
+  .pieces p {
+    margin-bottom: 1em;
+    line-height: 18px;
+  }
+}
+
+.cv-entete {
+  padding-top: 3em;
 }
 
 @media (max-width: 856px) {
