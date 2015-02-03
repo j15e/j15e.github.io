@@ -126,3 +126,26 @@ li.mini {
     margin: 0;
   }
 }
+
+@media print {
+  .cv {
+    -webkit-text-size-adjust: none;
+
+    li {
+      font-size: 13px;
+      line-height: 15px;
+      padding-left: 0.5em;
+    }
+    li li {
+      font-size: 11px;
+    }
+    .detail {
+      font-size: 11px;
+    }
+    .pieces p {
+      line-height: 18px;
+    }
+  }
+  .gros-bloc { width: 50% };
+  .page-break { page-break-before: always; }
+}
