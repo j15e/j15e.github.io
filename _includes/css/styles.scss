@@ -154,3 +154,18 @@ li.mini {
   .gros-bloc { width: 50% };
   .page-break { page-break-before: always; }
 }
+
+.img-high {
+  display: none;
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi) {
+
+  .img-small {
+    display: none;
+  }
+  .img-high {
+    display: inline;
+  }
+}
