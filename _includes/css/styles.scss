@@ -70,7 +70,7 @@ ul { list-style-type: none; }
   li {
     padding-left: 18px;
     font-size:  24px;
-    line-height: 28px;
+    line-height: 32px;
     -webkit-font-smoothing: antialiased;
   }
 }
@@ -121,6 +121,14 @@ li.mini {
   .gros-bloc {
     width: 100%;
     margin: 0;
+
+    li {
+      line-height: 38px;
+
+      &.mini {
+        font-size: 18px;
+      }
+    }
   }
 }
 
