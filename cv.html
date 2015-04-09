@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Jean-Philippe Doyle (j15e)</title>
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Average+Sans:400" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    {% capture styles %}
+      {% include css/styles.scss %}
+    {% endcapture %}
+    {{ styles | scssify }}
+  </style>
 </head>
 <body>
 <div class="enveloppe cv">
@@ -141,6 +145,19 @@
   </div>
 </div>
 <script>
+  WebFontConfig = {
+    google: { families: ['Average+Sans:400'] }
+  };
+
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = '/webfontloader.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -148,7 +165,6 @@
 
   ga('create', 'UA-45897850-1', 'j15e.com');
   ga('send', 'pageview');
-
 </script>
 </body>
 </html>
