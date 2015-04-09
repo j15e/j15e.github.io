@@ -6,8 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Jean-Philippe Doyle (j15e)</title>
-  <link href="https://fonts.googleapis.com/css?family=Average+Sans:400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <style type="text/css">
+    {% capture styles %}
+      {% include css/styles.scss %}
+    {% endcapture %}
+    {{ styles | scssify }}
+  </style>
+  <script>
+    WebFontConfig = {
+      google: { families: ['Average+Sans:400'] }
+    };
+
+    (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
 </head>
 <body>
 
